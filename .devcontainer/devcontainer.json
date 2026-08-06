@@ -4,7 +4,7 @@
 	"dockerFile": "Dockerfile",
 	"build": {
 		"args": {
-			"ROS_DISTRO": "jazzy",
+			"ROS_DISTRO": "lyrical",
 			"ROS_VARIANT": "full"
 		},
 		"options": ["--pull"]

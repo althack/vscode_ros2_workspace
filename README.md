@@ -11,7 +11,7 @@ See [how I develop with vscode and ros2](https://www.allisonthackston.com/articl
 ROS2-approved formatters are included in the IDE.  
 
 * **c++** uncrustify; config from `ament_uncrustify`
-* **python** autopep8; vscode settings consistent with the [style guide](https://docs.ros.org/en/jazzy/The-ROS2-Project/Contributing/Code-Style-Language-Versions.html)
+* **python** autopep8; vscode settings consistent with the [style guide](https://docs.ros.org/en/lyrical/The-ROS2-Project/Contributing/Code-Style-Language-Versions.html)
 
 ### Tasks
 
@@ -65,7 +65,7 @@ On the next dialog, name the repository you would like to start and decide if yo
 > 
 > The new default branch supports any version of ROS by setting the appropriate version you want in the 'FROM' line in `.devcontainer/Dockerfile`
 >
-> By default, this is set to `osrf/ros:jazzy-desktop-full`
+> By default, this is set to `althack/ros2:lyrical-full`
 
 ![template_new](https://user-images.githubusercontent.com/6098197/91332035-713ee980-e780-11ea-81d3-13b170f568b0.png)
 
@@ -224,11 +224,11 @@ This is likely because vscode doesn't necessarily know about other repositories 
 File->Add Folder To Workspace
 ```
 
-![Screenshot-26](https://github.com/athackst/vscode_ros2_workspace/assets/6098197/d8711320-2c16-463b-9d67-5bd9314acc7f)
+![Screenshot-26](https://github.com/althack/vscode_ros2_workspace/assets/6098197/d8711320-2c16-463b-9d67-5bd9314acc7f)
 
 Or you've added them as a git submodule.
 
-![Screenshot-27](https://github.com/athackst/vscode_ros2_workspace/assets/6098197/8ebc9aac-9d70-4b53-aa52-9b5b108dc935)
+![Screenshot-27](https://github.com/althack/vscode_ros2_workspace/assets/6098197/8ebc9aac-9d70-4b53-aa52-9b5b108dc935)
 
 To add all of the repos in your *.repos file, run the script
 
