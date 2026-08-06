@@ -65,7 +65,7 @@ On the next dialog, name the repository you would like to start and decide if yo
 > 
 > The new default branch supports any version of ROS by setting the appropriate version you want in the 'FROM' line in `.devcontainer/Dockerfile`
 >
-> By default, this is set to `osrf/ros:lyrical-full`
+> By default, this is set to `althack/ros2:lyrical-full`
 
 ![template_new](https://user-images.githubusercontent.com/6098197/91332035-713ee980-e780-11ea-81d3-13b170f568b0.png)
 
