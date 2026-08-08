@@ -8,23 +8,26 @@
       
       
       
-        <link rel="canonical" href="https://athackst.github.io/vscode_ros2_workspace/">
+        <link rel="canonical" href="https://althack.github.io/vscode_ros2_workspace/">
       
       
       
         <link rel="next" href="LICENSE/">
       
       
+        
+      
+      
       <link rel="icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>athackst/vscode_ros2_workspace</title>
+        <title>althack/vscode_ros2_workspace</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.6543a935.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -43,11 +46,10 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
-    
     
     
   </head>
@@ -78,21 +80,21 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="athackst/vscode_ros2_workspace" class="md-header__button md-logo" aria-label="athackst/vscode_ros2_workspace" data-md-component="logo">
+    <a href="." title="althack/vscode_ros2_workspace" class="md-header__button md-logo" aria-label="althack/vscode_ros2_workspace" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            athackst/vscode_ros2_workspace
+            althack/vscode_ros2_workspace
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -106,30 +108,32 @@
     </div>
     
     
-      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
       
@@ -146,13 +150,14 @@
     </div>
   </div>
 </div>
+      
     
     
       <div class="md-header__source">
-        <a href="https://github.com/athackst/vscode_ros2_workspace" title="Go to repository" class="md-source" data-md-component="source">
+        <a href="https://github.com/althack/vscode_ros2_workspace" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -185,20 +190,20 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="athackst/vscode_ros2_workspace" class="md-nav__button md-logo" aria-label="athackst/vscode_ros2_workspace" data-md-component="logo">
+    <a href="." title="althack/vscode_ros2_workspace" class="md-nav__button md-logo" aria-label="althack/vscode_ros2_workspace" data-md-component="logo">
       
   
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    athackst/vscode_ros2_workspace
+    althack/vscode_ros2_workspace
   </label>
   
     <div class="md-nav__source">
-      <a href="https://github.com/athackst/vscode_ros2_workspace" title="Go to repository" class="md-source" data-md-component="source">
+      <a href="https://github.com/althack/vscode_ros2_workspace" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     GitHub
@@ -227,9 +232,16 @@
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
+  
   <span class="md-ellipsis">
+    
+  
     VSCode ROS2 Workspace Template
+  
+
+    
   </span>
+  
   
 
           <span class="md-nav__icon md-icon"></span>
@@ -238,9 +250,16 @@
       <a href="." class="md-nav__link md-nav__link--active">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     VSCode ROS2 Workspace Template
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -263,7 +282,9 @@
         <li class="md-nav__item">
   <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Features
+      
+        Features
+      
     </span>
   </a>
   
@@ -271,36 +292,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#style" class="md-nav__link">
+  <a href="#development-environment" class="md-nav__link">
     <span class="md-ellipsis">
-      Style
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tasks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tasks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debugging" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debugging
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#continuous-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Continuous Integration
+      
+        Development environment
+      
     </span>
   </a>
   
@@ -314,7 +310,9 @@
         <li class="md-nav__item">
   <a href="#how-to-use-this-template" class="md-nav__link">
     <span class="md-ellipsis">
-      How to use this template
+      
+        How to use this template
+      
     </span>
   </a>
   
@@ -324,31 +322,20 @@
           <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      
+        Prerequisites
+      
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nvidia-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      NVidia support
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#get-the-template" class="md-nav__link">
     <span class="md-ellipsis">
-      Get the template
+      
+        Get the template
+      
     </span>
   </a>
   
@@ -357,7 +344,9 @@
           <li class="md-nav__item">
   <a href="#create-your-repository" class="md-nav__link">
     <span class="md-ellipsis">
-      Create your repository
+      
+        Create your repository
+      
     </span>
   </a>
   
@@ -366,7 +355,9 @@
           <li class="md-nav__item">
   <a href="#clone-your-repo" class="md-nav__link">
     <span class="md-ellipsis">
-      Clone your repo
+      
+        Clone your repo
+      
     </span>
   </a>
   
@@ -375,16 +366,9 @@
           <li class="md-nav__item">
   <a href="#open-it-in-vscode" class="md-nav__link">
     <span class="md-ellipsis">
-      Open it in vscode
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-the-template-with-your-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update the template with your code
+      
+        Open it in vscode
+      
     </span>
   </a>
   
@@ -396,56 +380,34 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
+  <a href="#gui-applications" class="md-nav__link">
     <span class="md-ellipsis">
-      FAQ
+      
+        GUI applications
+      
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="FAQ">
+    <nav class="md-nav" aria-label="GUI applications">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#xauthority" class="md-nav__link">
+  <a href="#windows-wsl2" class="md-nav__link">
     <span class="md-ellipsis">
-      XAuthority
+      
+        Windows / WSL2
+      
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#xdisplay" class="md-nav__link">
+  <a href="#linux-x11" class="md-nav__link">
     <span class="md-ellipsis">
-      XDisplay
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wsl2" class="md-nav__link">
-    <span class="md-ellipsis">
-      WSL2
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WSL2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-gui-doesnt-show-up" class="md-nav__link">
-    <span class="md-ellipsis">
-      The gui doesn't show up
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#i-want-to-use-vgpu" class="md-nav__link">
-    <span class="md-ellipsis">
-      I want to use vGPU
+      
+        Linux / X11
+      
     </span>
   </a>
   
@@ -455,60 +417,26 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#nvidia-cuda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NVIDIA / CUDA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#repos-are-not-showing-up-in-vs-code-source-control" class="md-nav__link">
     <span class="md-ellipsis">
-      Repos are not showing up in VS Code source control
+      
+        Repos are not showing up in VS Code source control
+      
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-handling-for-gpu-acceleration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error handling for GPU acceleration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Error handling for GPU acceleration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-image-cannot-be-built" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker image cannot be built:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#programs-in-docker-cannot-access-gpu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Programs in Docker cannot access GPU
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#more-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      more information
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -530,9 +458,16 @@
       <a href="LICENSE/" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
+    
+  
     LICENSE
+  
+
+    
   </span>
+  
   
 
       </a>
@@ -569,7 +504,9 @@
         <li class="md-nav__item">
   <a href="#features" class="md-nav__link">
     <span class="md-ellipsis">
-      Features
+      
+        Features
+      
     </span>
   </a>
   
@@ -577,36 +514,11 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#style" class="md-nav__link">
+  <a href="#development-environment" class="md-nav__link">
     <span class="md-ellipsis">
-      Style
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tasks" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tasks
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debugging" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debugging
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#continuous-integration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Continuous Integration
+      
+        Development environment
+      
     </span>
   </a>
   
@@ -620,7 +532,9 @@
         <li class="md-nav__item">
   <a href="#how-to-use-this-template" class="md-nav__link">
     <span class="md-ellipsis">
-      How to use this template
+      
+        How to use this template
+      
     </span>
   </a>
   
@@ -630,31 +544,20 @@
           <li class="md-nav__item">
   <a href="#prerequisites" class="md-nav__link">
     <span class="md-ellipsis">
-      Prerequisites
+      
+        Prerequisites
+      
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#nvidia-support" class="md-nav__link">
-    <span class="md-ellipsis">
-      NVidia support
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#get-the-template" class="md-nav__link">
     <span class="md-ellipsis">
-      Get the template
+      
+        Get the template
+      
     </span>
   </a>
   
@@ -663,7 +566,9 @@
           <li class="md-nav__item">
   <a href="#create-your-repository" class="md-nav__link">
     <span class="md-ellipsis">
-      Create your repository
+      
+        Create your repository
+      
     </span>
   </a>
   
@@ -672,7 +577,9 @@
           <li class="md-nav__item">
   <a href="#clone-your-repo" class="md-nav__link">
     <span class="md-ellipsis">
-      Clone your repo
+      
+        Clone your repo
+      
     </span>
   </a>
   
@@ -681,16 +588,9 @@
           <li class="md-nav__item">
   <a href="#open-it-in-vscode" class="md-nav__link">
     <span class="md-ellipsis">
-      Open it in vscode
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#update-the-template-with-your-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Update the template with your code
+      
+        Open it in vscode
+      
     </span>
   </a>
   
@@ -702,56 +602,34 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#faq" class="md-nav__link">
+  <a href="#gui-applications" class="md-nav__link">
     <span class="md-ellipsis">
-      FAQ
+      
+        GUI applications
+      
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="FAQ">
+    <nav class="md-nav" aria-label="GUI applications">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#xauthority" class="md-nav__link">
+  <a href="#windows-wsl2" class="md-nav__link">
     <span class="md-ellipsis">
-      XAuthority
+      
+        Windows / WSL2
+      
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#xdisplay" class="md-nav__link">
+  <a href="#linux-x11" class="md-nav__link">
     <span class="md-ellipsis">
-      XDisplay
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wsl2" class="md-nav__link">
-    <span class="md-ellipsis">
-      WSL2
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="WSL2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-gui-doesnt-show-up" class="md-nav__link">
-    <span class="md-ellipsis">
-      The gui doesn't show up
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#i-want-to-use-vgpu" class="md-nav__link">
-    <span class="md-ellipsis">
-      I want to use vGPU
+      
+        Linux / X11
+      
     </span>
   </a>
   
@@ -761,60 +639,26 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#nvidia-cuda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NVIDIA / CUDA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#repos-are-not-showing-up-in-vs-code-source-control" class="md-nav__link">
     <span class="md-ellipsis">
-      Repos are not showing up in VS Code source control
+      
+        Repos are not showing up in VS Code source control
+      
     </span>
   </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#error-handling-for-gpu-acceleration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Error handling for GPU acceleration
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Error handling for GPU acceleration">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#docker-image-cannot-be-built" class="md-nav__link">
-    <span class="md-ellipsis">
-      Docker image cannot be built:
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#programs-in-docker-cannot-access-gpu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Programs in Docker cannot access GPU
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#more-information" class="md-nav__link">
-    <span class="md-ellipsis">
-      more information
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -828,204 +672,173 @@
           
           
             <div class="md-content" data-md-component="content">
+              
               <article class="md-content__inner md-typeset">
                 
                   
 
 
+
 <h1 id="vscode-ros2-workspace-template">VSCode ROS2 Workspace Template</h1>
 <p>This template will get you set up using ROS2 with VSCode as your IDE.</p>
-<p>See <a href="https://www.allisonthackston.com/articles/vscode_docker_ros2.html">how I develop with vscode and ros2</a> for a more in-depth look on how to use this workspace.</p>
+<p>The development environment is set up using a VSCode devcontainer, and the same configuration is also used in CI.</p>
 <h2 id="features">Features</h2>
-<h3 id="style">Style</h3>
-<p>ROS2-approved formatters are included in the IDE.  </p>
-<ul>
-<li><strong>c++</strong> uncrustify; config from <code>ament_uncrustify</code></li>
-<li><strong>python</strong> autopep8; vscode settings consistent with the <a href="https://docs.ros.org/en/jazzy/The-ROS2-Project/Contributing/Code-Style-Language-Versions.html">style guide</a></li>
-</ul>
-<h3 id="tasks">Tasks</h3>
-<p>There are many pre-defined tasks, see <a href=".vscode/tasks.json"><code>.vscode/tasks.json</code></a> for a complete listing.  Feel free to adjust them to suit your needs.  </p>
-<p>Take a look at <a href="https://www.allisonthackston.com/articles/vscode_tasks.html">how I develop using tasks</a> for an idea on how I use tasks in my development.</p>
-<h3 id="debugging">Debugging</h3>
-<p>This template sets up debugging for python files, gdb for cpp programs and ROS launch files.  See <a href=".vscode/launch.json"><code>.vscode/launch.json</code></a> for configuration details.</p>
-<h3 id="continuous-integration">Continuous Integration</h3>
-<p>The template also comes with basic continuous integration set up. See <a href="/.github/workflows/ros.yaml"><code>.github/workflows/ros.yaml</code></a>.</p>
-<p>To remove a linter just delete it's name from this line:</p>
-<pre><code class="language-yaml">      matrix:
-          linter: [cppcheck, cpplint, uncrustify, lint_cmake, xmllint, flake8, pep257]
+<h3 id="development-environment">Development environment</h3>
+<p>The devcontainer uses the Microsoft Ubuntu devcontainer image along with the ROS2 devcontainer feature.</p>
+<p>If you want to change which version of ROS you're using, update the ROS2 feature in <code>.devcontainer/devcontainer.json</code>:</p>
+<p>```jsonc id="vozthd"
+"ghcr.io/althack/devcontainers/ros2:0": {
+  "distro": "lyrical",
+  "package": "desktop"
+}</p>
+<pre><code>
+This is also the ROS version used in CI, so you only need to change it in one place.
+
+### Style
+
+ROS2-approved formatters are included in the IDE.
+
+* **c++** uncrustify; config from `ament_uncrustify`
+* **python** autopep8; vscode settings consistent with the [style guide](https://docs.ros.org/en/lyrical/The-ROS2-Project/Contributing/Code-Style-Language-Versions.html)
+
+### Tasks
+
+There are many pre-defined tasks, see [`.vscode/tasks.json`](.vscode/tasks.json) for a complete listing. Feel free to adjust them to suit your needs.
+
+Take a look at [how I develop using tasks](https://www.allisonthackston.com/articles/vscode_tasks.html) for an idea of how I use tasks in my development.
+
+### Debugging
+
+This template sets up debugging for python files, gdb for cpp programs, and ROS launch files.
+
+See [`.vscode/launch.json`](.vscode/launch.json) for configuration details.
+
+### Continuous Integration
+
+The template also comes with basic continuous integration set up. See [`.github/workflows/ros.yaml`](.github/workflows/ros.yaml).
+
+The build, test, and lint jobs run using the same devcontainer configuration used for development. This means changing the ROS distro in `.devcontainer/devcontainer.json` also changes the version used by CI.
+
+To remove a linter, just delete its name from the matrix:
+
+```yaml id=&quot;nxevf7&quot;
+matrix:
+  linter:
+    - cppcheck
+    - cpplint
+    - uncrustify
+    - lint_cmake
+    - xmllint
+    - flake8
+    - pep257
 </code></pre>
 <h2 id="how-to-use-this-template">How to use this template</h2>
 <h3 id="prerequisites">Prerequisites</h3>
-<p>You should already have Docker and VSCode with the remote containers plugin installed on your system.</p>
+<p>You should already have Docker and VSCode with the Dev Containers extension installed on your system.</p>
 <ul>
 <li><a href="https://docs.docker.com/engine/install/">docker</a></li>
 <li><a href="https://code.visualstudio.com/">vscode</a></li>
-<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">vscode remote containers plugin</a></li>
+<li><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers">vscode dev containers extension</a></li>
 </ul>
-<h4 id="nvidia-support">NVidia support</h4>
-<p>To make nvidia driver and opengl available in docker, follow the installation instructions for docker-nvidia.
-They include the steps in docker and add the additional gpu layer.</p>
-<ul>
-<li><a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker">docker-nvidia (includes docker install and additional installation for NVidia GPU accelerated hosts)</a></li>
-</ul>
+<p>If you're using Windows, I recommend using WSL2 and opening the repository from your WSL distro before reopening it in the container.</p>
 <h3 id="get-the-template">Get the template</h3>
-<p>Click on "use this template"</p>
+<p>Click on <strong>Use this template</strong>.</p>
 <p><img alt="template_use" src="https://user-images.githubusercontent.com/6098197/91331899-43f23b80-e780-11ea-92c8-b4665ce126f1.png" /></p>
 <h3 id="create-your-repository">Create your repository</h3>
-<p>On the next dialog, name the repository you would like to start and decide if you want all of the branches, or the default branch.</p>
-<blockquote>
-<p>[!IMPORTANT]
-The new default branch supports any version of ROS by setting the appropriate version you want in the 'FROM' line in <code>.devcontainer/Dockerfile</code></p>
-<p>By default, this is set to <code>osrf/ros:jazzy-desktop-full</code></p>
-</blockquote>
+<p>On the next dialog, name the repository you would like to start and choose its visibility.</p>
 <p><img alt="template_new" src="https://user-images.githubusercontent.com/6098197/91332035-713ee980-e780-11ea-81d3-13b170f568b0.png" /></p>
-<p>Github will then create a new repository with the contents of this one in your account.  It grabs the latest changes as "initial commit".</p>
+<p>Github will then create a new repository with the contents of this one in your account. It grabs the latest changes as the initial commit.</p>
 <h3 id="clone-your-repo">Clone your repo</h3>
-<p>Now you can clone your repo as normal</p>
+<p>Now you can clone your repo as normal.</p>
 <p><img alt="template_download" src="https://user-images.githubusercontent.com/6098197/91332342-e4e0f680-e780-11ea-9525-49b0afa0e4bb.png" /></p>
 <h3 id="open-it-in-vscode">Open it in vscode</h3>
-<p>Now that you've cloned your repo onto your computer, you can open it in VSCode (File-&gt;Open Folder).</p>
-<p>When you open it for the first time, you should see a little popup that asks you if you would like to open it in a container.  Say yes!</p>
+<p>Now that you've cloned your repo onto your computer, open it in VSCode (<code>File -&gt; Open Folder</code>).</p>
+<p>When you open it for the first time, you should see a popup asking if you would like to reopen it in a container. Say yes!</p>
 <p><img alt="template_vscode" src="https://user-images.githubusercontent.com/6098197/91332551-36898100-e781-11ea-9080-729964373719.png" /></p>
-<p>If you don't see the pop-up, click on the little green square in the bottom left corner, which should bring up the container dialog</p>
-<p><img alt="template_vscode_bottom" src="https://user-images.githubusercontent.com/6098197/91332638-5d47b780-e781-11ea-9fb6-4d134dbfc464.png" /></p>
-<p>In the dialog, select "Remote Containers: Reopen in container"</p>
-<p>VSCode will build the dockerfile inside of <code>.devcontainer</code> for you.  If you open a terminal inside VSCode (Terminal-&gt;New Terminal), you should see that your username has been changed to <code>ros</code>, and the bottom left green corner should say "Dev Container"</p>
-<p><img alt="template_container" src="https://user-images.githubusercontent.com/6098197/91332895-adbf1500-e781-11ea-8afc-7a22a5340d4a.png" /></p>
-<h3 id="update-the-template-with-your-code">Update the template with your code</h3>
-<ol>
-<li>Specify the repositories you want to include in your workspace in <code>src/ros2.repos</code> or delete <code>src/ros2.repos</code> and develop directly within the workspace.</li>
-<li>If you are using a <code>ros2.repos</code> file, import the contents <code>Terminal-&gt;Run Task..-&gt;import from workspace file</code></li>
-<li>Install dependencies <code>Terminal-&gt;Run Task..-&gt;install dependencies</code></li>
-<li>(optional) Adjust scripts to your liking.  These scripts are used both within tasks and CI.</li>
-<li><code>setup.sh</code> The setup commands for your code.  Default to import workspace and install dependencies.</li>
-<li><code>build.sh</code> The build commands for your code.  Default to <code>--merge-install</code> and <code>--symlink-install</code></li>
-<li><code>test.sh</code> The test commands for your code.</li>
-<li>Develop!</li>
-</ol>
-<h2 id="faq">FAQ</h2>
-<h3 id="xauthority">XAuthority</h3>
-<p>If you see the error:</p>
-<pre><code class="language-text">Authorization required, but no authorization protocol specified Unable to open display: :0 Authorization required, but no authorization protocol specified
+<p>If you don't see the popup, open the command palette and select:</p>
+<p>```text id="fipghb"
+Dev Containers: Reopen in Container</p>
+<pre><code>
+VSCode will set up the container from `.devcontainer/devcontainer.json`, install ROS2 and the configured development tools, and install the recommended VSCode extensions.
+
+Once that's finished, open a terminal inside VSCode and you're ready to go.
+
+## Update the template with your code
+
+1. Specify the repositories you want to include in your workspace in `src/ros2.repos`, or delete `src/ros2.repos` and develop directly within the workspace.
+2. If you are using a `ros2.repos` file, import the contents with `Terminal -&gt; Run Task... -&gt; import from workspace file`.
+3. Install dependencies with `Terminal -&gt; Run Task... -&gt; install dependencies`.
+4. Adjust the scripts to your liking. These scripts are used both within tasks and CI.
+
+   * `setup.sh` - setup commands for your code. By default this imports the workspace and installs dependencies.
+   * `build.sh` - build commands for your code. By default this uses `--merge-install` and `--symlink-install`.
+   * `test.sh` - test commands for your code.
+5. Develop!
+
+## Changing the ROS distro
+
+The ROS distro is selected by the ROS2 feature in `.devcontainer/devcontainer.json`:
+
+```jsonc id=&quot;si9pp5&quot;
+&quot;ghcr.io/althack/devcontainers/ros2:0&quot;: {
+  &quot;distro&quot;: &quot;lyrical&quot;,
+  &quot;package&quot;: &quot;desktop&quot;
+}
 </code></pre>
-<p>You may need to update the UID/GID to match yours.  In <code>.devcontainer/devcontainer.json</code> update the lines that are marked <code>Change to match your UID</code> and <code>Change to match your GID</code></p>
-<p>.devcontainer/devcontainer.json</p>
-<pre><code class="language-jsonc"> &quot;build&quot;: {
-  &quot;args&quot;: {
-   ...
-   // &quot;USERNAME&quot;: &quot;ros&quot;,
-   // &quot;USER_UID&quot;: &quot;1000&quot;, //Change to match your UID
-   // &quot;USER_GID&quot;: &quot;1000&quot; // Change to match your GID
-  },
- },
- ...
- &quot;runArgs&quot;: [
-  ...
-  &quot;--volume=/run/user/1000:/run/user/1000&quot;, // Change 1000 to match your UID
-  ...
- ],
+<p>Change <code>distro</code> to the version you want to use and rebuild the container.</p>
+<p>Since CI uses the same devcontainer configuration, you don't need to update the ROS distro anywhere else.</p>
+<h2 id="gui-applications">GUI applications</h2>
+<h3 id="windows-wsl2">Windows / WSL2</h3>
+<p>If you're using Windows, open the repository from your WSL2 distro and then reopen it in the devcontainer.</p>
+<p>Current versions of VSCode Dev Containers and WSLg handle the display forwarding for you, so you shouldn't need to manually configure <code>DISPLAY</code>, Wayland, PulseAudio, or <code>/mnt/wslg</code> mounts.</p>
+<h3 id="linux-x11">Linux / X11</h3>
+<p>If you're using native Linux with X11, uncomment the X11 forwarding feature in <code>.devcontainer/devcontainer.json</code>:</p>
+<p>```jsonc id="mxugk2"
+"ghcr.io/althack/devcontainers/linux-x11-forwarding:0": {},</p>
+<pre><code>
+Some GUI applications may also need the container to share the host IPC namespace. If you run into rendering problems, try uncommenting:
+
+```jsonc id=&quot;9b5wt2&quot;
+&quot;--ipc=host&quot;
 </code></pre>
-<h3 id="xdisplay">XDisplay</h3>
-<p>If you see the error:</p>
-<pre><code class="language-text">Couldn't open X display in GLXGLSupport::getGLDisplay at ./.obj-x86_64-linux-gnu/ogre_vendor-prefix/src/ogre_vendor/RenderSystems/GLSupport/src/GLX/OgreGLXGLSupport.cpp
+<p>in <code>runArgs</code>.</p>
+<h2 id="nvidia-cuda">NVIDIA / CUDA</h2>
+<p>CUDA support is optional.</p>
+<p>If you want to use CUDA, uncomment the NVIDIA CUDA feature in <code>.devcontainer/devcontainer.json</code>:</p>
+<p>```jsonc id="w72s2s"
+"ghcr.io/devcontainers/features/nvidia-cuda:3": {
+  "installToolkit": true
+}</p>
+<pre><code>
+and allow the container to access the host GPU:
+
+```jsonc id=&quot;xa78sc&quot;
+&quot;--gpus&quot;,
+&quot;all&quot;
 </code></pre>
-<p>You need to remove or comment out the wayland options</p>
-<pre><code class="language-jsonc"> &quot;runArgs&quot;: [
-  ...
-  // Wayland host
-  //&quot;--volume=/mnt/wslg:/mnt/wslg&quot;,
-  // &quot;--volume=/run/user/1000:/run/user/1000&quot;,
-  // uncomment to use intel iGPU
-  // &quot;--device=/dev/dri&quot;
-  ...
- ],
- ...
-  &quot;containerEnv&quot;: {
-  ...
-  // For Wayland
-  // &quot;WAYLAND_DISPLAY&quot;: &quot;${localEnv:WAYLAND_DISPLAY}&quot;,
-  // &quot;XDG_RUNTIME_DIR&quot;: &quot;${localEnv:XDG_RUNTIME_DIR}&quot;,
-  // &quot;QT_QPA_PLATFORM&quot;: &quot;wayland&quot;, // Force Wayland
-  ...
- },
+<p>You'll also need working NVIDIA drivers and the NVIDIA Container Toolkit installed on the host.</p>
+<p>See the <a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html">NVIDIA Container Toolkit installation guide</a> for setup instructions.</p>
+<p>I don't test all of the possible NVIDIA/CUDA host configurations, so your mileage may vary here.</p>
+<h2 id="repos-are-not-showing-up-in-vs-code-source-control">Repos are not showing up in VS Code source control</h2>
+<p>VSCode doesn't necessarily know about repositories you've imported underneath the workspace.</p>
+<p>You can add them directly using:</p>
+<p>```text id="jwb7ls"
+File -&gt; Add Folder To Workspace</p>
+<pre><code>
+![Screenshot-26](https://github.com/althack/vscode_ros2_workspace/assets/6098197/d8711320-2c16-463b-9d67-5bd9314acc7f)
+
+Or you can add them as git submodules.
+
+![Screenshot-27](https://github.com/althack/vscode_ros2_workspace/assets/6098197/8ebc9aac-9d70-4b53-aa52-9b5b108dc935)
+
+To add all of the repos in your `*.repos` file as submodules, run:
+
+```bash id=&quot;1pnpb2&quot;
+python3 .devcontainer/repos_to_submodules.py
 </code></pre>
-<h3 id="wsl2">WSL2</h3>
-<h4 id="the-gui-doesnt-show-up">The gui doesn't show up</h4>
-<p>This is likely because the DISPLAY environment variable is not getting set properly.</p>
-<ol>
-<li>
-<p>Find out what your DISPLAY variable should be</p>
-<p>In your WSL2 Ubuntu instance</p>
-<p><code>bash
-  echo $DISPLAY</code></p>
-</li>
-<li>
-<p>Copy that value into the <code>.devcontainer/devcontainer.json</code> file</p>
-<p><code>jsonc
-  "containerEnv": {
-    "DISPLAY": ":0",
-  }</code></p>
-</li>
-</ol>
-<h4 id="i-want-to-use-vgpu">I want to use vGPU</h4>
-<p>If you want to access the vGPU through WSL2, you'll need to add additional components to the <code>.devcontainer/devcontainer.json</code> file in accordance to <a href="https://github.com/microsoft/wslg/blob/main/samples/container/Containers.md">these directions</a></p>
-<pre><code class="language-jsonc"> &quot;runArgs&quot;: [
-  &quot;--network=host&quot;,
-  &quot;--cap-add=SYS_PTRACE&quot;,
-  &quot;--security-opt=seccomp:unconfined&quot;,
-  &quot;--security-opt=apparmor:unconfined&quot;,
-  &quot;--volume=/tmp/.X11-unix:/tmp/.X11-unix&quot;,
-  &quot;--volume=/mnt/wslg:/mnt/wslg&quot;,
-  &quot;--volume=/usr/lib/wsl:/usr/lib/wsl&quot;,
-  &quot;--device=/dev/dxg&quot;,
-  &quot;--gpus=all&quot;
- ],
- &quot;containerEnv&quot;: {
-  &quot;DISPLAY&quot;: &quot;${localEnv:DISPLAY}&quot;, // Needed for GUI try &quot;:0&quot; for windows
-  &quot;WAYLAND_DISPLAY&quot;: &quot;${localEnv:WAYLAND_DISPLAY}&quot;,
-  &quot;XDG_RUNTIME_DIR&quot;: &quot;${localEnv:XDG_RUNTIME_DIR}&quot;,
-  &quot;PULSE_SERVER&quot;: &quot;${localEnv:PULSE_SERVER}&quot;,
-  &quot;LD_LIBRARY_PATH&quot;: &quot;/usr/lib/wsl/lib&quot;,
-  &quot;LIBGL_ALWAYS_SOFTWARE&quot;: &quot;1&quot; // Needed for software rendering of opengl
- },
-</code></pre>
-<h3 id="repos-are-not-showing-up-in-vs-code-source-control">Repos are not showing up in VS Code source control</h3>
-<p>This is likely because vscode doesn't necessarily know about other repositories unless you've added them directly.</p>
-<pre><code class="language-text">File-&gt;Add Folder To Workspace
-</code></pre>
-<p><img alt="Screenshot-26" src="https://github.com/athackst/vscode_ros2_workspace/assets/6098197/d8711320-2c16-463b-9d67-5bd9314acc7f" /></p>
-<p>Or you've added them as a git submodule.</p>
-<p><img alt="Screenshot-27" src="https://github.com/athackst/vscode_ros2_workspace/assets/6098197/8ebc9aac-9d70-4b53-aa52-9b5b108dc935" /></p>
-<p>To add all of the repos in your *.repos file, run the script</p>
-<pre><code class="language-bash">python3 .devcontainer/repos_to_submodules.py
-</code></pre>
-<p>or run the task titled <code>add submodules from .repos</code></p>
-<h3 id="error-handling-for-gpu-acceleration">Error handling for GPU acceleration</h3>
-<h4 id="docker-image-cannot-be-built">Docker image cannot be built:</h4>
-<p>The dockerfile can be built but using devcontainer.json results in error messages like "docker container cannot connect to device [[gpu]]" means docker itself is installed, but not the above mentioned nvidia part.</p>
-<p>Solution is, to follow the guide and the test with nvidia-smi as indicated here:</p>
-<ul>
-<li><a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker">docker-nvidia(for GPU acceleration on Nvidia GPU hosts)</a></li>
-</ul>
-<h4 id="programs-in-docker-cannot-access-gpu">Programs in Docker cannot access GPU</h4>
-<p>Error messages that show lacking GPU acceleration (in docker terminal)</p>
-<pre><code class="language-bash">sudo apt-get update   &amp;&amp; sudo apt-get install -y -qq glmark2   &amp;&amp; glmark2
-</code></pre>
-<p>results in:</p>
-<pre><code class="language-bash">   libGL error: No matching fbConfigs or visuals found
-   libGL error: failed to load driver: swrast
-      X Error of failed request:  GLXBadContext
-   Major opcode of failed request:  151 (GLX)
-   Minor opcode of failed request:  6 (X_GLXIsDirect)
-   Serial number of failed request:  48
-   Current serial number in output stream:  47
-</code></pre>
-<p>Solution is, to follow the guide and the test with nvidia-smi as indicated here: 
-<a href="https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker">docker-nvidia(for GPU acceleration on Nvidia GPU hosts)</a></p>
-<h4 id="more-information">more information</h4>
-<p>https://wiki.ros.org/docker/Tutorials/GUI
-https://medium.com/@benjamin.botto/opengl-and-cuda-applications-in-docker-af0eece000f1
-https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker</p>
+<p>or run the task titled:</p>
+<p><code>text id="7do355"
+add submodules from .repos</code></p>
 
 
 
@@ -1072,10 +885,13 @@ https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": [], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
