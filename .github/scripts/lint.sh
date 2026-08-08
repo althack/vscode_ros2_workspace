@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+LINTER="$1"
+
 ./setup.sh
 
 case "$LINTER" in
@@ -18,5 +20,5 @@ case "$LINTER" in
     ;;
 esac
 
-source /opt/ros/$ROS_DISTRO/setup.bash
-ament_${LINTER} src/
+source "/opt/ros/$ROS_DISTRO/setup.bash"
+"ament_${LINTER}" src/
