@@ -1,65 +1,37 @@
-// For format details, see https://aka.ms/devcontainer.json. For config options, see the
-// README at: https://github.com/devcontainers/templates/tree/main/src/ubuntu
 {
-	"dockerFile": "Dockerfile",
-	"build": {
-		"args": {
-			"ROS_DISTRO": "lyrical",
-			"ROS_VARIANT": "full"
-		},
-		"options": ["--pull"]
+	"name": "ROS 2 Workspace",
+	"image": "mcr.microsoft.com/devcontainers/base:ubuntu26.04",
+	"features": {
+		// For CUDA support uncomment the following line.
+		// "ghcr.io/devcontainers/features/nvidia-cuda:3": {
+		// 	"installToolkit": true
+		// },
+		// For GUI applications on native Linux using X11, uncomment this feature.
+		// "ghcr.io/althack/devcontainers/linux-x11-forwarding:0": {},
+		"ghcr.io/althack/devcontainers/ros2:0": {
+			"distro": "lyrical",
+			"package": "desktop"
+		}
 	},
 	"runArgs": [
 		"--network=host",
 		"--cap-add=SYS_PTRACE",
 		"--security-opt=seccomp:unconfined",
-		"--security-opt=apparmor:unconfined",
-		// X11 host
-		"--volume=/tmp/.X11-unix:/tmp/.X11-unix:rw",
-		// Wayland host
-		"--volume=/mnt/wslg:/mnt/wslg",
-		"--ipc=host",
-		// uncomment to use intel iGPU
-		// "--device=/dev/dri"
-		// Share user run time settings
-		"--volume=/run/user/1000:/run/user/1000" // Change 1000 to match your UID
-		// uncomment to use Nvidia GPU with Linux, https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html
-		// "--runtime=nvidia"
-		// uncomment to use Nvidia GPU with Windows WSL2
-		// "--volume=/usr/lib/wsl:/usr/lib/wsl",
-		// "--device=/dev/dxg",
-		// "--device=/dev/dri/card0",
-		// "--device=/dev/dri/renderD128",
-		// "--gpus=all"
+		// For GUI applications on Linux, the IPC namespace may need to be shared with the host.
+		// "--ipc=host"
+		// For CUDA support, uncomment the following line. This allows the container to access the GPU on the host machine.
+		// "--gpus",
+		// "all"
 	],
-	"containerEnv": {
-		"DISPLAY": "${localEnv:DISPLAY}", // Needed for GUI try ":0" for windows
-		"XAUTHORITY": "${localEnv:XAUTHORITY}",
-		// For Wayland
-		"WAYLAND_DISPLAY": "${localEnv:WAYLAND_DISPLAY}",
-		"XDG_RUNTIME_DIR": "${localEnv:XDG_RUNTIME_DIR}",
-		// "QT_QPA_PLATFORM": "wayland", // uncomment to force Wayland
-		// For audio
-		"PULSE_SERVER": "${localEnv:PULSE_SERVER}",
-		"LIBGL_ALWAYS_SOFTWARE": "1" // Needed for software rendering of opengl
-	},
-	"remoteUser": "ros",
-	// Set *default* container specific settings.json values on container create.
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"althack.ament-task-provider",
-				"betwo.b2-catkin-tools",
-				"DotJoshJohnson.xml",
-				"ms-azuretools.vscode-docker",
 				"ms-python.autopep8",
 				"ms-python.python",
 				"ms-vscode.cpptools",
 				"Ranch-Hand-Robotics.rde-pack",
 				"redhat.vscode-yaml",
-				"streetsidesoftware.code-spell-checker",
-				"twxs.cmake",
-				"yzhang.markdown-all-in-one",
 				"zachflower.uncrustify"
 			]
 		}

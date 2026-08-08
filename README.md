@@ -2,277 +2,214 @@
 
 This template will get you set up using ROS2 with VSCode as your IDE.
 
-See [how I develop with vscode and ros2](https://www.allisonthackston.com/articles/vscode_docker_ros2.html) for a more in-depth look on how to use this workspace.
+The development environment is set up using a VSCode devcontainer, and the same configuration is also used in CI.
 
 ## Features
 
+### Development environment
+
+The devcontainer uses the Microsoft Ubuntu devcontainer image along with the ROS2 devcontainer feature.
+
+If you want to change which version of ROS you're using, update the ROS2 feature in `.devcontainer/devcontainer.json`:
+
+```jsonc id="vozthd"
+"ghcr.io/althack/devcontainers/ros2:0": {
+  "distro": "lyrical",
+  "package": "desktop"
+}
+```
+
+This is also the ROS version used in CI, so you only need to change it in one place.
+
 ### Style
 
-ROS2-approved formatters are included in the IDE.  
+ROS2-approved formatters are included in the IDE.
 
 * **c++** uncrustify; config from `ament_uncrustify`
 * **python** autopep8; vscode settings consistent with the [style guide](https://docs.ros.org/en/lyrical/The-ROS2-Project/Contributing/Code-Style-Language-Versions.html)
 
 ### Tasks
 
-There are many pre-defined tasks, see [`.vscode/tasks.json`](.vscode/tasks.json) for a complete listing.  Feel free to adjust them to suit your needs.  
+There are many pre-defined tasks, see [`.vscode/tasks.json`](.vscode/tasks.json) for a complete listing. Feel free to adjust them to suit your needs.
 
-Take a look at [how I develop using tasks](https://www.allisonthackston.com/articles/vscode_tasks.html) for an idea on how I use tasks in my development.
+Take a look at [how I develop using tasks](https://www.allisonthackston.com/articles/vscode_tasks.html) for an idea of how I use tasks in my development.
 
 ### Debugging
 
-This template sets up debugging for python files, gdb for cpp programs and ROS launch files.  See [`.vscode/launch.json`](.vscode/launch.json) for configuration details.
+This template sets up debugging for python files, gdb for cpp programs, and ROS launch files.
+
+See [`.vscode/launch.json`](.vscode/launch.json) for configuration details.
 
 ### Continuous Integration
 
-The template also comes with basic continuous integration set up. See [`.github/workflows/ros.yaml`](/.github/workflows/ros.yaml).
+The template also comes with basic continuous integration set up. See [`.github/workflows/ros.yaml`](.github/workflows/ros.yaml).
 
-To remove a linter just delete it's name from this line:
+The build, test, and lint jobs run using the same devcontainer configuration used for development. This means changing the ROS distro in `.devcontainer/devcontainer.json` also changes the version used by CI.
 
-```yaml
-      matrix:
-          linter: [cppcheck, cpplint, uncrustify, lint_cmake, xmllint, flake8, pep257]
+To remove a linter, just delete its name from the matrix:
+
+```yaml id="nxevf7"
+matrix:
+  linter:
+    - cppcheck
+    - cpplint
+    - uncrustify
+    - lint_cmake
+    - xmllint
+    - flake8
+    - pep257
 ```
 
 ## How to use this template
 
 ### Prerequisites
 
-You should already have Docker and VSCode with the remote containers plugin installed on your system.
+You should already have Docker and VSCode with the Dev Containers extension installed on your system.
 
 * [docker](https://docs.docker.com/engine/install/)
 * [vscode](https://code.visualstudio.com/)
-* [vscode remote containers plugin](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+* [vscode dev containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
-#### NVidia support
-
-To make nvidia driver and opengl available in docker, follow the installation instructions for docker-nvidia.
-They include the steps in docker and add the additional gpu layer.
-
-* [docker-nvidia (includes docker install and additional installation for NVidia GPU accelerated hosts)](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
+If you're using Windows, I recommend using WSL2 and opening the repository from your WSL distro before reopening it in the container.
 
 ### Get the template
 
-Click on "use this template"
+Click on **Use this template**.
 
 ![template_use](https://user-images.githubusercontent.com/6098197/91331899-43f23b80-e780-11ea-92c8-b4665ce126f1.png)
 
 ### Create your repository
 
-On the next dialog, name the repository you would like to start and decide if you want all of the branches, or the default branch.
-
-> [!IMPORTANT]
-> 
-> The new default branch supports any version of ROS by setting the appropriate version you want in the 'FROM' line in `.devcontainer/Dockerfile`
->
-> By default, this is set to `althack/ros2:lyrical-full`
+On the next dialog, name the repository you would like to start and choose its visibility.
 
 ![template_new](https://user-images.githubusercontent.com/6098197/91332035-713ee980-e780-11ea-81d3-13b170f568b0.png)
 
-Github will then create a new repository with the contents of this one in your account.  It grabs the latest changes as "initial commit".
+Github will then create a new repository with the contents of this one in your account. It grabs the latest changes as the initial commit.
 
 ### Clone your repo
 
-Now you can clone your repo as normal
+Now you can clone your repo as normal.
 
 ![template_download](https://user-images.githubusercontent.com/6098197/91332342-e4e0f680-e780-11ea-9525-49b0afa0e4bb.png)
 
 ### Open it in vscode
 
-Now that you've cloned your repo onto your computer, you can open it in VSCode (File->Open Folder).
+Now that you've cloned your repo onto your computer, open it in VSCode (`File -> Open Folder`).
 
-When you open it for the first time, you should see a little popup that asks you if you would like to open it in a container.  Say yes!
+When you open it for the first time, you should see a popup asking if you would like to reopen it in a container. Say yes!
 
 ![template_vscode](https://user-images.githubusercontent.com/6098197/91332551-36898100-e781-11ea-9080-729964373719.png)
 
-If you don't see the pop-up, click on the little green square in the bottom left corner, which should bring up the container dialog
+If you don't see the popup, open the command palette and select:
 
-![template_vscode_bottom](https://user-images.githubusercontent.com/6098197/91332638-5d47b780-e781-11ea-9fb6-4d134dbfc464.png)
+```text id="fipghb"
+Dev Containers: Reopen in Container
+```
 
-In the dialog, select "Remote Containers: Reopen in container"
+VSCode will set up the container from `.devcontainer/devcontainer.json`, install ROS2 and the configured development tools, and install the recommended VSCode extensions.
 
-VSCode will build the dockerfile inside of `.devcontainer` for you.  If you open a terminal inside VSCode (Terminal->New Terminal), you should see that your username has been changed to `ros`, and the bottom left green corner should say "Dev Container"
+Once that's finished, open a terminal inside VSCode and you're ready to go.
 
-![template_container](https://user-images.githubusercontent.com/6098197/91332895-adbf1500-e781-11ea-8afc-7a22a5340d4a.png)
+## Update the template with your code
 
-### Update the template with your code
+1. Specify the repositories you want to include in your workspace in `src/ros2.repos`, or delete `src/ros2.repos` and develop directly within the workspace.
+2. If you are using a `ros2.repos` file, import the contents with `Terminal -> Run Task... -> import from workspace file`.
+3. Install dependencies with `Terminal -> Run Task... -> install dependencies`.
+4. Adjust the scripts to your liking. These scripts are used both within tasks and CI.
 
-1. Specify the repositories you want to include in your workspace in `src/ros2.repos` or delete `src/ros2.repos` and develop directly within the workspace.
-2. If you are using a `ros2.repos` file, import the contents `Terminal->Run Task..->import from workspace file`
-3. Install dependencies `Terminal->Run Task..->install dependencies`
-4. (optional) Adjust scripts to your liking.  These scripts are used both within tasks and CI.
-   * `setup.sh` The setup commands for your code.  Default to import workspace and install dependencies.
-   * `build.sh` The build commands for your code.  Default to `--merge-install` and `--symlink-install`
-   * `test.sh` The test commands for your code.
+   * `setup.sh` - setup commands for your code. By default this imports the workspace and installs dependencies.
+   * `build.sh` - build commands for your code. By default this uses `--merge-install` and `--symlink-install`.
+   * `test.sh` - test commands for your code.
 5. Develop!
 
-## FAQ
+## Changing the ROS distro
 
-### XAuthority
+The ROS distro is selected by the ROS2 feature in `.devcontainer/devcontainer.json`:
 
-If you see the error:
-
-```text
-Authorization required, but no authorization protocol specified Unable to open display: :0 Authorization required, but no authorization protocol specified
+```jsonc id="si9pp5"
+"ghcr.io/althack/devcontainers/ros2:0": {
+  "distro": "lyrical",
+  "package": "desktop"
+}
 ```
 
-You may need to update the UID/GID to match yours.  In `.devcontainer/devcontainer.json` update the lines that are marked `Change to match your UID` and `Change to match your GID`
+Change `distro` to the version you want to use and rebuild the container.
 
-.devcontainer/devcontainer.json
+Since CI uses the same devcontainer configuration, you don't need to update the ROS distro anywhere else.
 
-```jsonc
- "build": {
-  "args": {
-   ...
-   // "USERNAME": "ros",
-   // "USER_UID": "1000", //Change to match your UID
-   // "USER_GID": "1000" // Change to match your GID
-  },
- },
- ...
- "runArgs": [
-  ...
-  "--volume=/run/user/1000:/run/user/1000", // Change 1000 to match your UID
-  ...
- ],
+## GUI applications
+
+### Windows / WSL2
+
+If you're using Windows, open the repository from your WSL2 distro and then reopen it in the devcontainer.
+
+Current versions of VSCode Dev Containers and WSLg handle the display forwarding for you, so you shouldn't need to manually configure `DISPLAY`, Wayland, PulseAudio, or `/mnt/wslg` mounts.
+
+### Linux / X11
+
+If you're using native Linux with X11, uncomment the X11 forwarding feature in `.devcontainer/devcontainer.json`:
+
+```jsonc id="mxugk2"
+"ghcr.io/althack/devcontainers/linux-x11-forwarding:0": {},
 ```
 
-### XDisplay
+Some GUI applications may also need the container to share the host IPC namespace. If you run into rendering problems, try uncommenting:
 
-If you see the error:
-
-```text
-Couldn't open X display in GLXGLSupport::getGLDisplay at ./.obj-x86_64-linux-gnu/ogre_vendor-prefix/src/ogre_vendor/RenderSystems/GLSupport/src/GLX/OgreGLXGLSupport.cpp
+```jsonc id="9b5wt2"
+"--ipc=host"
 ```
 
-You need to remove or comment out the wayland options
+in `runArgs`.
 
-```jsonc
- "runArgs": [
-  ...
-  // Wayland host
-  //"--volume=/mnt/wslg:/mnt/wslg",
-  // "--volume=/run/user/1000:/run/user/1000",
-  // uncomment to use intel iGPU
-  // "--device=/dev/dri"
-  ...
- ],
- ...
-  "containerEnv": {
-  ...
-  // For Wayland
-  // "WAYLAND_DISPLAY": "${localEnv:WAYLAND_DISPLAY}",
-  // "XDG_RUNTIME_DIR": "${localEnv:XDG_RUNTIME_DIR}",
-  // "QT_QPA_PLATFORM": "wayland", // Force Wayland
-  ...
- },
+## NVIDIA / CUDA
+
+CUDA support is optional.
+
+If you want to use CUDA, uncomment the NVIDIA CUDA feature in `.devcontainer/devcontainer.json`:
+
+```jsonc id="w72s2s"
+"ghcr.io/devcontainers/features/nvidia-cuda:3": {
+  "installToolkit": true
+}
 ```
 
-### WSL2
+and allow the container to access the host GPU:
 
-#### The gui doesn't show up
-
-This is likely because the DISPLAY environment variable is not getting set properly.
-
-1. Find out what your DISPLAY variable should be
-
-      In your WSL2 Ubuntu instance
-
-      ```bash
-      echo $DISPLAY
-      ```
-
-2. Copy that value into the `.devcontainer/devcontainer.json` file
-
-      ```jsonc
-      "containerEnv": {
-        "DISPLAY": ":0",
-      }
-      ```
-
-#### I want to use vGPU
-
-If you want to access the vGPU through WSL2, you'll need to add additional components to the `.devcontainer/devcontainer.json` file in accordance to [these directions](https://github.com/microsoft/wslg/blob/main/samples/container/Containers.md)
-
-```jsonc
- "runArgs": [
-  "--network=host",
-  "--cap-add=SYS_PTRACE",
-  "--security-opt=seccomp:unconfined",
-  "--security-opt=apparmor:unconfined",
-  "--volume=/tmp/.X11-unix:/tmp/.X11-unix",
-  "--volume=/mnt/wslg:/mnt/wslg",
-  "--volume=/usr/lib/wsl:/usr/lib/wsl",
-  "--device=/dev/dxg",
-  "--gpus=all"
- ],
- "containerEnv": {
-  "DISPLAY": "${localEnv:DISPLAY}", // Needed for GUI try ":0" for windows
-  "WAYLAND_DISPLAY": "${localEnv:WAYLAND_DISPLAY}",
-  "XDG_RUNTIME_DIR": "${localEnv:XDG_RUNTIME_DIR}",
-  "PULSE_SERVER": "${localEnv:PULSE_SERVER}",
-  "LD_LIBRARY_PATH": "/usr/lib/wsl/lib",
-  "LIBGL_ALWAYS_SOFTWARE": "1" // Needed for software rendering of opengl
- },
+```jsonc id="xa78sc"
+"--gpus",
+"all"
 ```
 
-### Repos are not showing up in VS Code source control
+You'll also need working NVIDIA drivers and the NVIDIA Container Toolkit installed on the host.
 
-This is likely because vscode doesn't necessarily know about other repositories unless you've added them directly.
+See the [NVIDIA Container Toolkit installation guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/latest/install-guide.html) for setup instructions.
 
-```text
-File->Add Folder To Workspace
+I don't test all of the possible NVIDIA/CUDA host configurations, so your mileage may vary here.
+
+## Repos are not showing up in VS Code source control
+
+VSCode doesn't necessarily know about repositories you've imported underneath the workspace.
+
+You can add them directly using:
+
+```text id="jwb7ls"
+File -> Add Folder To Workspace
 ```
 
 ![Screenshot-26](https://github.com/althack/vscode_ros2_workspace/assets/6098197/d8711320-2c16-463b-9d67-5bd9314acc7f)
 
-Or you've added them as a git submodule.
+Or you can add them as git submodules.
 
 ![Screenshot-27](https://github.com/althack/vscode_ros2_workspace/assets/6098197/8ebc9aac-9d70-4b53-aa52-9b5b108dc935)
 
-To add all of the repos in your *.repos file, run the script
+To add all of the repos in your `*.repos` file as submodules, run:
 
-```bash
+```bash id="1pnpb2"
 python3 .devcontainer/repos_to_submodules.py
 ```
 
-or run the task titled `add submodules from .repos`
+or run the task titled:
 
-### Error handling for GPU acceleration
-
-#### Docker image cannot be built:
-
-The dockerfile can be built but using devcontainer.json results in error messages like "docker container cannot connect to device [[gpu]]" means docker itself is installed, but not the above mentioned nvidia part.
-
-Solution is, to follow the guide and the test with nvidia-smi as indicated here:
-
-- [docker-nvidia(for GPU acceleration on Nvidia GPU hosts)](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
-
-#### Programs in Docker cannot access GPU
-
-Error messages that show lacking GPU acceleration (in docker terminal)
-
-```bash
-sudo apt-get update   && sudo apt-get install -y -qq glmark2   && glmark2
+```text id="7do355"
+add submodules from .repos
 ```
-
-results in:
-
-```bash
-   libGL error: No matching fbConfigs or visuals found
-   libGL error: failed to load driver: swrast
-      X Error of failed request:  GLXBadContext
-   Major opcode of failed request:  151 (GLX)
-   Minor opcode of failed request:  6 (X_GLXIsDirect)
-   Serial number of failed request:  48
-   Current serial number in output stream:  47
-```
-
-Solution is, to follow the guide and the test with nvidia-smi as indicated here: 
-[docker-nvidia(for GPU acceleration on Nvidia GPU hosts)](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker)
-
-#### more information
-
-https://wiki.ros.org/docker/Tutorials/GUI
-https://medium.com/@benjamin.botto/opengl-and-cuda-applications-in-docker-af0eece000f1
-https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#docker

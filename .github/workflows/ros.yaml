@@ -3,25 +3,26 @@ name: ROS
 on:
   pull_request:
   push:
-    branches: 
-      - humble*
-      - iron*
-      - jazzy*
-      - rolling*
+    branches:
       - main
   workflow_dispatch:
-    
+
 jobs:
   test:
     name: test
     runs-on: ubuntu-latest
     steps:
-      - 
-        name: Checkout code
+      - name: Checkout code
         uses: actions/checkout@v7
-      -
-        name: Test
-        uses: ./.github/actions/test/
+
+      - name: Test in devcontainer
+        uses: devcontainers/ci@v0.3
+        with:
+          push: never
+          runCmd: |
+            ./setup.sh
+            ./build.sh
+            ./test.sh
 
   lint:
     name: ament_${{ matrix.linter }}
@@ -29,16 +30,23 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-          linter: [cppcheck, cpplint, uncrustify, lint_cmake, xmllint, flake8, pep257]
+        linter:
+          - cppcheck
+          - cpplint
+          - uncrustify
+          - lint_cmake
+          - xmllint
+          - flake8
+          - pep257
     steps:
-      - 
-        name: Checkout code
+      - name: Checkout code
         uses: actions/checkout@v7
-      -
-        name: Run linter
-        uses: ./.github/actions/lint/
-        env: 
-          LINTER: ${{ matrix.linter }}
+
+      - name: Run linter in devcontainer
+        uses: devcontainers/ci@v0.3
+        with:
+          push: never
+          runCmd: .github/scripts/lint.sh ${{ matrix.linter }}
 
   complete:
     name: Tests passed
