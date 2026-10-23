@@ -17,7 +17,7 @@ def is_submodule(repo_name):
 
 def parse_repos_file(file_path):
     with open(file_path, 'r') as file:
-        repos_data = yaml.safe_load(file)
+        repos_data = yaml.safe_load(os.path.expandvars(file.read()))
         repositories = repos_data['repositories']
         
         for repo_name, repo_info in repositories.items():
