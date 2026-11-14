@@ -49,11 +49,20 @@ jobs:
           runCmd: .github/scripts/lint.sh ${{ matrix.linter }}
 
   complete:
+    if: ${{ always() }}
     name: Tests passed
     needs:
       - lint
       - test
     runs-on: ubuntu-latest
     steps:
-      - name: Check
-        run: echo "Completed successfully!"
+      - name: Check required job results
+        env:
+          NEEDS_RESULTS: ${{ toJSON(needs) }}
+        run: |
+          echo "$NEEDS_RESULTS" | jq -r 'to_entries[] | "\(.key): \(.value.result)"'
+          if ! echo "$NEEDS_RESULTS" | jq -e 'all(.[]; .result == "success")' > /dev/null; then
+            echo "::error::All required jobs must succeed. A job failed, was cancelled, or was skipped."
+            exit 1
+          fi
+          echo "All required jobs passed!"
